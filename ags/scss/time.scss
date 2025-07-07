@@ -1,0 +1,15 @@
+@use "mocha" as *;
+
+time {
+  background: $surface0;
+  border-radius: 10px;
+
+  .regular-time {
+    color: rgba($text, 1);
+  }
+
+  .time-icon {
+    font-size: 20px;
+    padding-right: 2px;
+  }
+}

@@ -1,0 +1,25 @@
+#!/bin/bash
+
+WATCH_DIR="${1:-.}"
+CMD="ags run --gtk4"
+
+# Function to kill AGS and related GJS (only AGS-related GJS)
+kill_ags_gjs() {
+  ags quit
+}
+
+# Start AGS
+start_ags() {
+  echo "Starting: $CMD"
+  $CMD &
+}
+
+# Start AGS initially
+start_ags
+
+inotifywait -m -r -e modify,create,delete,move --format '%w%f' "$WATCH_DIR" |
+  while read -r changed; do
+    echo "File changed: $changed"
+    kill_ags_gjs
+    start_ags
+  done

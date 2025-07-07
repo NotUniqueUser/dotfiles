@@ -1,0 +1,37 @@
+@use "mocha" as *;
+
+menubutton.media-widget {
+  > popover > contents {
+    background: transparent;
+    box-shadow: none;
+  }
+}
+
+box.media-preview {
+  border: 2px solid $mantle;
+  border-radius: 10px;
+}
+
+box.media-player {
+  border: 2px solid $mantle;
+  border-radius: 10px;
+  background-color: $surface0;
+  box.cover-art {
+    border: 5px solid transparent;
+    border-radius: 20px;
+    margin: 5px 0px 5px 5px;
+    min-width: 60px;
+    min-height: 60px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+
+  .cava {
+    padding: 5px;
+    color: $lavender;
+  }
+  .playback-info {
+    padding: 0px 5px;
+  }
+}
