@@ -5,6 +5,7 @@ import TimeButton from "./Time";
 import Tray from "./Tray";
 import { END, LEFT, RIGHT, TOP } from "./utils/base";
 import Playback from "./Playback";
+import Workspace from "./Workspace";
 
 export default function Bar(gdkmonitor: Gdk.Monitor) {
   return (
@@ -19,9 +20,11 @@ export default function Bar(gdkmonitor: Gdk.Monitor) {
         <centerbox
           hexpand
           cssName="centerbox"
-          startWidget=<Tray />
+          startWidget={Workspace(gdkmonitor)}
           centerWidget=<ActiveWindow />
-          endWidget=<box halign={END}>{[<Playback />, <TimeButton />]}</box>
+          endWidget=<box halign={END}>
+            {[<Tray />, <Playback />, <TimeButton />]}
+          </box>
         />
       }
     />

@@ -56,7 +56,7 @@ export default function Playback() {
   return (
     <menubutton
       cssClasses={["media-widget"]}
-      child=<label label={""} />
+      child=<label cssClasses={["playback-icon"]} label={""} />
       // @ts-expect-error
       popover=<popover>
         <box

@@ -5,7 +5,7 @@ const tray = AstalTray.get_default();
 
 export default function Tray() {
   return (
-    <box>
+    <box cssName="tray">
       {bind(tray, "items").as((items) =>
         items.map((item) => (
           <menubutton
@@ -15,8 +15,10 @@ export default function Tray() {
             }}
             tooltipMarkup={bind(item, "tooltipMarkup")}
             menuModel={bind(item, "menuModel")}
-            child={<image gicon={bind(item, "gicon")} />}
-          ></menubutton>
+            child={
+              <image css_classes={["tray-icon"]} gicon={bind(item, "gicon")} />
+            }
+          />
         )),
       )}
     </box>
