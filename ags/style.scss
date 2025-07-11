@@ -11,13 +11,15 @@ window.Bar {
   background: transparent;
   font-weight: bold;
 
-  > centerbox {
-    border: 2px solid $mantle;
-    border-radius: 5px;
-  }
+  // > centerbox {
+  //   border: 2px solid $surface1;
+  //   border-radius: 5px;
+  // }
 
   button {
-    background: $surface0;
+    margin: 0px;
+    padding: 0px 2px;
+    background: transparent;
     border-radius: 10px;
   }
 }

@@ -84,7 +84,7 @@ function seperateTime(timeDate: String) {
 
 export default function MenuButton() {
   return (
-    <menubutton
+    <button
       cssName="time"
       widthRequest={100}
       hexpand
@@ -92,6 +92,7 @@ export default function MenuButton() {
       cssClasses={["button-border"]}
       child={dateTime().as(seperateTime)}
       tooltip_text={exec("cal -n 2")}
+      onClicked={() => exec("swaync-client -t -sw")}
     />
   );
 }
