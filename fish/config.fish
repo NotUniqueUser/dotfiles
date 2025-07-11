@@ -7,7 +7,6 @@ if status is-interactive
 end
 
 set EDITOR nvim
-set NNN_PLUG 'f:finder;s:chksum;o:fzopen;v:imgview'
 
 pyenv init - fish | source
 
@@ -20,3 +19,5 @@ if uwsm check may-start
 
     exec uwsm start hyprland.desktop
 end
+
+fish_add_path /home/gilad/.spicetify
