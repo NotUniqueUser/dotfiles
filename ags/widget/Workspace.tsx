@@ -1,4 +1,4 @@
-import { bind, Variable } from "astal";
+import { bind } from "astal";
 import { Gdk } from "astal/gtk4";
 import AstalHyprland from "gi://AstalHyprland";
 
