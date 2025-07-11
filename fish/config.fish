@@ -20,4 +20,4 @@ if uwsm check may-start
     exec uwsm start hyprland.desktop
 end
 
-fish_add_path /home/gilad/.spicetify
+fish_add_path ~/.spicetify
